@@ -15,7 +15,7 @@ base = "/"
 publish = "demo/dist"
 
 # Default build command.
-command = "npm run build:example"
+command = "npm run build:demo"
 
 [[plugins]]
 # Installs the Lighthouse Build Plugin for all deploy contexts
