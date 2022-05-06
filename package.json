@@ -1,0 +1,91 @@
+{
+	"name": "vue3-feather",
+	"version": "5.0",
+	"description": "Simply beautiful open source icons as Vue functional components.",
+	"repository": {
+		"url": "envatic/vue3-feather",
+		"type": "git"
+	},
+	"scripts": {
+		"serve": "vue-cli-service serve demo/main",
+		"build": "npm run build:icons && npm run prebuild && npm run build:all ",
+		"lint": "vue-cli-service lint",
+		"build:all": "npm run build:dist && npm run build:ssr && npm run build:es && npm run build:unpkg",
+		"build:dist": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
+		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
+		"build:demo": "vue-cli-service build demo/main",
+		"build:icons": "node build && babel src/components -d icons",
+		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
+		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
+		"prebuild": "rimraf ./dist"
+	},
+	"main": "dist/vue3-feather.ssr.js",
+	"module": "dist/vue3-feather.esm.js",
+	"browser": "dist/vue3-feather.esm.js",
+	"unpkg": "dist/vue3-feather.min.js",
+	"files": [
+		"dist/*",
+		"src/**/*.vue"
+	],
+	"dependencies": {
+		"bili": "^5.0.5",
+		"markdown-loader": "^8.0.0",
+		"vue-tippy": "^6.0.0-alpha.47"
+	},
+	"devDependencies": {
+		"@babel/cli": "^7.2.3",
+		"@babel/core": "^7.17.10",
+		"@babel/eslint-parser": "^7.12.16",
+		"@babel/preset-env": "^7.17.10",
+		"@rollup/plugin-alias": "^3.1.9",
+		"@rollup/plugin-babel": "^5.3.1",
+		"@rollup/plugin-commonjs": "^22.0.0",
+		"@rollup/plugin-node-resolve": "^13.3.0",
+		"@rollup/plugin-replace": "^4.0.0",
+		"@vue/babel-plugin-jsx": "^1.1.1",
+		"@vue/cli-plugin-babel": "~5.0.0",
+		"@vue/cli-plugin-eslint": "~5.0.0",
+		"@vue/cli-service": "^5.0.4",
+		"@vue/compiler-sfc": "^3.2.33",
+		"babel-eslint": "^10.1.0",
+		"cross-env": "^7.0.3",
+		"eslint": "^7.32.0",
+		"eslint-config-prettier": "^8.3.0",
+		"eslint-config-rem": "^3.1.0",
+		"eslint-plugin-prettier": "^4.0.0",
+		"eslint-plugin-vue": "^8.0.3",
+		"feather-icons": "^4.28.0",
+		"fs-extra": "^8.0.1",
+		"html-loader": "^3.1.0",
+		"lint-staged": "^11.1.2",
+		"lodash.kebabcase": "^4.1.1",
+		"marked": "^4.0.15",
+		"minimist": "^1.2.6",
+		"pascal-case": "^2.0.1",
+		"postcss": "^8.4.13",
+		"prettier": "^2.4.1",
+		"prismjs": "^1.6.0",
+		"rimraf": "^3.0.2",
+		"rollup": "^2.72.0",
+		"rollup-plugin-postcss": "^4.0.2",
+		"rollup-plugin-terser": "^7.0.2",
+		"rollup-plugin-vue": "^6.0.0",
+		"typeface-nunito": "^0.0.72",
+		"vue": "^3.2.33"
+	},
+	"peerDependencies": {
+		"vue": "^3.0.5"
+	},
+	"babel": {
+		"presets": [
+			"bili/babel"
+		],
+		"plugins": [
+			"@vue/babel-plugin-jsx"
+		]
+	},
+	"engines": {
+		"node": ">=12"
+	},
+	"sideEffects": false
+}
