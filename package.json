@@ -1,6 +1,6 @@
 {
 	"name": "vue3-feather",
-	"version": "5.1.1",
+	"version": "5.2.0",
 	"description": "Simply beautiful open source icons as Vue functional components.",
 	"repository": {
 		"url": "envatic/vue3-feather",
@@ -15,7 +15,8 @@
 		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
 		"demo": "vue-cli-service build demo/main",
 		"build:demo": "npm run build && npm run demo",
-		"build:icons": "node build && babel src/components -d icons",
+		"build:icons": "node build",
+		"build:tst": "node build",
 		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
 		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
 		"prebuild": "rimraf ./dist"

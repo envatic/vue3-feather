@@ -73,7 +73,7 @@
 </template>
 
 <script>
-import kebab from "lodash.kebabcase";
+
 import Github from "./Github.vue";
 import * as icons from "../src";
 import example from "./example.md";
@@ -102,7 +102,7 @@ export default {
     example() {
       return example
         .replace(/ICON/g, this.hoverIcon)
-        .replace(/kebab-icon/g, kebab(this.hoverIcon));
+        .replace(/kebab-icon/g, this.hoverIcon);
     },
   },
   methods: {
