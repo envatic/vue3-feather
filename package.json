@@ -16,7 +16,6 @@
 		"demo": "vue-cli-service build demo/main",
 		"build:demo": "npm run build && npm run demo",
 		"build:icons": "node build",
-		"build:tst": "node build",
 		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
 		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
 		"prebuild": "rimraf ./dist"
