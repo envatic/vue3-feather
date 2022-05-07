@@ -1,6 +1,6 @@
 {
 	"name": "vue3-feather",
-	"version": "5.0.0",
+	"version": "5.1.0",
 	"description": "Simply beautiful open source icons as Vue functional components.",
 	"repository": {
 		"url": "envatic/vue3-feather",
@@ -31,7 +31,8 @@
 	"dependencies": {
 		"bili": "^5.0.5",
 		"markdown-loader": "^8.0.0",
-		"vue-tippy": "^6.0.0-alpha.47"
+		"vue-tippy": "^6.0.0-alpha.47",
+		"vue3-feather": "^5.1.0"
 	},
 	"devDependencies": {
 		"@babel/cli": "^7.2.3",

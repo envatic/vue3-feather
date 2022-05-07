@@ -1,6 +1,6 @@
 # vue3-feather
 
-[![NPM version](https://img.shields.io/npm/v/vue3-feather.svg?style=flat)](https://npmjs.com/package/vue3-feather) [![NPM downloads](https://img.shields.io/npm/dm/vue3-feather.svg?style=flat)](https://npmjs.com/package/vue3-feather) [![CircleCI](https://circleci.com/gh/envatic/vue3-feather/tree/master.svg?style=shield)](https://circleci.com/gh/envatic/vue3-feather/tree/master) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/envatic/donate)
+[![NPM version](https://img.shields.io/npm/v/vue3-feather.svg?style=flat)](https://npmjs.com/package/vue3-feather) [![NPM downloads](https://img.shields.io/npm/dm/vue3-feather.svg?style=flat)](https://npmjs.com/package/vue3-feather)[![Netlify Status](https://api.netlify.com/api/v1/badges/9f14b9c3-cfa6-4458-8a72-62277057aa87/deploy-status)](https://app.netlify.com/sites/vue3-feather/deploys) [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/envatic/donate)
 
 ## Install
 
@@ -15,6 +15,7 @@ yarn add vue3-feather
 import { AirplayIcon, AtSignIcon, ... } from 'vue3-feather'
 ```
 This is a Fork of [https://github.com/egoist/vue-feather-icons](https://github.com/egoist/vue-feather-icons)
+
 See all icons and usage here: https://vue3-feather.netlify.app
 
 ### Sizing
