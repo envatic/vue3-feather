@@ -26,7 +26,7 @@ export default {
                 : parseInt(propSize.value) + "px"
         );
         const attrs = reactive({
-            ...toRefs(attributes),
+            ...attributes,
             width: computed(() => attributes.width ?? size.value),
             height: computed(() => attributes.height ?? size.value),
         });
