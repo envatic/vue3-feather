@@ -4,7 +4,6 @@ module.exports = {
     extract: true,
   },
 
-  outputDir: "demo/dist",
   chainWebpack(config) {
     config.plugin("eslint").tap((args) => {
       args[0].failOnError = false;

@@ -8,17 +8,18 @@
 	},
 	"scripts": {
 		"serve": "vue-cli-service serve demo/main",
-		"build": "npm run build:icons && npm run prebuild && npm run build:all ",
+		"build": "npm run build:icons && npm run prebuild && npm run build:vue ",
 		"lint": "vue-cli-service lint",
 		"build:all": "npm run build:dist && npm run build:ssr && npm run build:es && npm run build:unpkg",
 		"build:dist": "cross-env NODE_ENV=production rollup --config build/rollup.config.js",
 		"build:es": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format es",
-		"demo": "vue-cli-service build demo/main",
+		"demo": "vue-cli-service build --dest demo/dist demo/main",
 		"build:demo": "npm run build && npm run demo",
 		"build:icons": "node build",
 		"build:ssr": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format cjs",
 		"build:unpkg": "cross-env NODE_ENV=production rollup --config build/rollup.config.js --format iife",
-		"prebuild": "rimraf ./dist"
+		"prebuild": "rimraf ./dist",
+		"build:vue": "vue-cli-service build --target lib --dest dist src/index.js"
 	},
 	"main": "dist/vue3-feather.ssr.js",
 	"module": "dist/vue3-feather.esm.js",
